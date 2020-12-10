@@ -1,14 +1,17 @@
 <template>
   <div id="app">
-    ..
+    <pageheader>
+      hello
+    </pageheader>
   </div>
 </template>
 
 <script>
-
+import pageheader from "./PageHeader"
 export default {
   name: 'App',
   components: {
+    pageheader
   },
   data () {
     return {
