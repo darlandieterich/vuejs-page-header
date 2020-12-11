@@ -1,7 +1,7 @@
 <template>
-  <div class="header" :style="`margin:${margin}`">
-    <h2 class="pgname">{{pagename}}</h2>
-    <div class="header-right">
+  <div class="ph-main" :style="`background-color: ${bgColor} ${getStyle}`">
+    <h2 class="ph-title">{{pagename}}</h2>
+    <div class="ph-header-right">
       <slot></slot>
     </div>
   </div>
@@ -15,37 +15,45 @@ export default {
       type: String,
       default: ''
     },
-    margin: {
+    styles: {
+      type: Object,
+      default: () => ({})
+    },
+    bgColor: {
       type: String,
-      default: '0px 0px 4px 0px'
+      default: '#cdd1ce'
+    }
+  },
+  computed: {
+    getStyle: function () {
+      return Object.entries(this.styles).map(function (key) {
+        return `${key[0]}:${key[1]}`
+      }).join(";")
     }
   }
 }
 </script>
 
-<style scoped>
-.header {
+<style>
+.ph-main {
   overflow: hidden;
   background-color: #f1f1f1;
   padding: 4px 10px;
   margin-bottom: 4px;
 }
 
-.header h2 {
+.ph-main > h2 {
   float: left;
   color: black;
   text-align: center;
   text-decoration: none;
   font-size: 18px;
   line-height: 1px;
-}
-
-.header h2.pgname {
-  font-size: 25px;
   font-weight: bold;
+  font-family: Tahoma;
 }
 
-.header-right {
+.ph-header-right {
   float: right;
   padding: 4px;
 }
