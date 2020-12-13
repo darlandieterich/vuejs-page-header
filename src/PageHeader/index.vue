@@ -1,5 +1,5 @@
 <template>
-  <div class="ph-main" :style="`background-color: ${bgColor} ${getStyle}`">
+  <div class="ph-main" :style="`background-color: ${bgColor}; font-size: ${fontSyze}; ${getStyle}`">
     <h2 class="ph-title">{{pagename}}</h2>
     <div class="ph-header-right">
       <slot></slot>
@@ -22,6 +22,10 @@ export default {
     bgColor: {
       type: String,
       default: '#cdd1ce'
+    },
+    fontSyze: {
+      type: String,
+      default: '16px'
     }
   },
   computed: {
