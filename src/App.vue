@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <pageheader>
+    <pageheader pagename="pagina x">
       hello
     </pageheader>
   </div>

@@ -51,7 +51,7 @@ export default {
   margin-bottom: 4px;
 }
 
-.ph-title {
+.ph-main > h2 {
   float: left;
   color: black;
   text-align: center;
