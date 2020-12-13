@@ -1,5 +1,6 @@
 <template>
-  <div class="ph-main" :style="`background-color: ${bgColor}; font-size: ${fontSyze}; ${getStyle}`">
+  <div class="ph-main" :style="`background-color: ${bgColor};
+  font-family: ${fontFamily}; font-size: ${fontSyze}; ${getStyle}`">
     <h2 class="ph-title">{{pagename}}</h2>
     <div class="ph-header-right">
       <slot></slot>
@@ -26,6 +27,10 @@ export default {
     fontSyze: {
       type: String,
       default: '16px'
+    },
+    fontFamily: {
+      type: String,
+      default: 'Tahoma'
     }
   },
   computed: {
@@ -46,7 +51,7 @@ export default {
   margin-bottom: 4px;
 }
 
-.ph-main > h2 {
+.ph-title {
   float: left;
   color: black;
   text-align: center;
