@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <pageheader pagename="pagina x">
+    <pageheader pagename="pagina x" :fontFamily="'Arial'">
       hello
     </pageheader>
   </div>
