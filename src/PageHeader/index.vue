@@ -1,7 +1,7 @@
 <template>
   <div class="ph-main" :style="`background-color: ${bgColor};
   font-family: ${fontFamily}; font-size: ${fontSyze}; ${getStyle}`">
-    <h2 class="ph-title"><icon name="back2" size="5em" color="black"/> {{pagename}}</h2>
+    <h2 class="ph-title"><icon name="back1" size="5em" color="danger"/> {{pagename}}</h2>
     <div class="ph-header-right">
       <slot></slot>
     </div>
