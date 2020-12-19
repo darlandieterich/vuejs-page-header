@@ -1,7 +1,7 @@
 <template>
   <div class="ph-main" :style="`background-color: ${bgColor};
   font-family: ${fontFamily}; font-size: ${fontSyze}; ${getStyle}`">
-    <h2 class="ph-title">
+    <h2 class="ph-header-left">
       <div class="ph-main-item">
         <icon v-on:click="test" name="back1" size="2em" color="danger"/>
       </div>
@@ -62,12 +62,14 @@ export default {
 <style>
 .ph-main {
   overflow: hidden;
+  display: flex;
   background-color: #f1f1f1;
   padding: 4px 10px;
-  margin-bottom: 4px;
+  height: 30px;
+  align-items: center;
 }
 
-.ph-main > h2 {
+.ph-header-left {
   float: left;
   color: black;
   text-align: center;
@@ -80,7 +82,7 @@ export default {
 
 .ph-main-item {
   float: left;
-  height: 15px;
+  height: 1px;
   padding: 1px;
   display: flex;
   align-items: center;
@@ -88,7 +90,12 @@ export default {
 }
 
 .ph-header-right {
-  float: right;
-  padding: 4px;
+  margin-left: auto;
+  height: 15px;
+  padding: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: baseline;
 }
 </style>
