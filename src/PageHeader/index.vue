@@ -1,7 +1,14 @@
 <template>
   <div class="ph-main" :style="`background-color: ${bgColor};
   font-family: ${fontFamily}; font-size: ${fontSyze}; ${getStyle}`">
-    <h2 class="ph-title"><icon name="back1" size="5em" color="danger"/> {{pagename}}</h2>
+    <h2 class="ph-title">
+      <div class="ph-main-item">
+        <icon v-on:click="test" name="back1" size="2em" color="danger"/>
+      </div>
+      <div class="ph-main-item">
+        {{pagename}}
+      </div>
+    </h2>
     <div class="ph-header-right">
       <slot></slot>
     </div>
@@ -43,6 +50,11 @@ export default {
         return `${key[0]}:${key[1]}`
       }).join(";")
     }
+  },
+  methods: {
+    test() {
+      alert('hi')
+    }
   }
 }
 </script>
@@ -64,6 +76,15 @@ export default {
   line-height: 1px;
   font-weight: bold;
   font-family: Tahoma;
+}
+
+.ph-main-item {
+  float: left;
+  height: 15px;
+  padding: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .ph-header-right {
