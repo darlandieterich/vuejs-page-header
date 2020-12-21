@@ -1,6 +1,6 @@
 <template>
-  <div class="ph-main" :style="`background-color: ${bgColor};
-  font-family: ${fontFamily}; font-size: ${fontSyze}; ${getStyle}`">
+  <div class="ph-main" :style="`background-color: ${bgColor}; font-family: ${fontFamily};
+  font-size: ${fontSyze}; height: ${height}; ${getStyle};`">
     <h2 class="ph-header-left">
       <div class="ph-main-item">
         <icon v-on:click="test" name="back1" size="2em" color="danger"/>
@@ -42,6 +42,10 @@ export default {
     fontFamily: {
       type: String,
       default: 'Tahoma'
+    },
+    height: {
+      type: String,
+      default: '30px'
     }
   },
   computed: {
