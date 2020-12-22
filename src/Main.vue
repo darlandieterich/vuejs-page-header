@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <pageheader pagename="Página x" :fontFamily="'Tahoma'">
+    <pageheader pagename="Página x" :fontFamily="'Tahoma'" @clickBack="test">
       hello
     </pageheader>
   </div>
@@ -18,6 +18,9 @@ export default {
     }
   },
   methods: {
+    test() {
+      alert("the callback is pressed")
+    }
   }
 }
 </script>

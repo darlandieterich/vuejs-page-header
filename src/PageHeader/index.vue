@@ -2,8 +2,8 @@
   <div class="ph-main" :style="`background-color: ${bgColor}; font-family: ${fontFamily};
   font-size: ${fontSyze}; height: ${height}; ${getStyle};`">
     <h2 class="ph-header-left">
-      <div class="ph-main-item">
-        <icon v-on:click="test" name="back1" size="2em" color="danger"/>
+      <div class="ph-main-item" v-on:click="clickBack">
+        <icon name="back1" size="2em" color="danger"/>
       </div>
       <div class="ph-main-item">
         {{pagename}}
@@ -56,8 +56,8 @@ export default {
     }
   },
   methods: {
-    test() {
-      alert('hi')
+    clickBack() {
+      this.$emit("clickBack")
     }
   }
 }
