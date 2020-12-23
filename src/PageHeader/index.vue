@@ -3,7 +3,7 @@
   font-size: ${fontSyze}; height: ${height}; ${getStyle};`">
     <h2 class="ph-header-left">
       <div class="ph-main-item" v-on:click="clickBack">
-        <icon name="back1" size="2em" color="danger"/>
+        <icon :name="icon" size="2em" color="danger"/>
       </div>
       <div class="ph-main-item">
         {{pagename}}
@@ -46,6 +46,11 @@ export default {
     height: {
       type: String,
       default: '30px'
+    },
+    icon: {
+      type: String,
+      default: 'back1',
+      description: 'Define the icon'
     }
   },
   computed: {
