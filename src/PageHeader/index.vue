@@ -1,9 +1,9 @@
 <template>
   <div class="ph-main" :style="`background-color: ${bgColor}; font-family: ${fontFamily};
-  font-size: ${fontSyze}; height: ${height}; ${getStyle};`">
+  font-size: ${fontSyze}; color: ${fgColor}; height: ${height}; ${getStyle};`">
     <h2 class="ph-header-left">
       <div class="ph-main-item" v-on:click="clickBack">
-        <icon :name="icon" size="2em" color="danger"/>
+        <icon :name="icon" size="large" :color="fgColor"/>
       </div>
       <div class="ph-main-item">
         {{pagename}}
@@ -30,6 +30,10 @@ export default {
     styles: {
       type: Object,
       default: () => ({})
+    },
+    fgColor: {
+      type: String,
+      default: '#000'
     },
     bgColor: {
       type: String,
@@ -80,13 +84,11 @@ export default {
 
 .ph-header-left {
   float: left;
-  color: black;
   text-align: center;
   text-decoration: none;
   font-size: 18px;
   line-height: 1px;
   font-weight: bold;
-  font-family: Tahoma;
 }
 
 .ph-main-item {

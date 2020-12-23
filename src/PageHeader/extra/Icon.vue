@@ -2,7 +2,7 @@
   <svg
     viewBox="0 0 24 24"
     class="icon"
-    :class="styleClasses"
+    :style="`fill: ${color}`"
   >
     <path :d="path" />
   </svg>
@@ -31,7 +31,7 @@ export default {
       return icons[this.name]
     },
     styleClasses() {
-      return [this.size, this.color].map(val => val && `is-${val}`);
+      return [this.size].map(val => val && `is-${val}`);
     }
   }
 }
@@ -64,23 +64,5 @@ export default {
 .icon.is-tiny {
   width: 0.8em;
   height: 0.8em;
-}
-
-/* colors */
-.icon.is-primary,
-.icon.is-blue {
-  fill: #2196F3
-}
-.icon.is-success,
-.icon.is-green {
-  fill: #4CAF50
-}
-.icon.is-danger,
-.icon.is-red  {
-  fill: #F44336
-}
-.icon.is-warning,
-.icon.is-orange {
-  fill: #FF9800
 }
 </style>
