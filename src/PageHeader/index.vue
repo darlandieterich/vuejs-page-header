@@ -1,6 +1,6 @@
 <template>
   <div class="ph-main" :style="`background-color: ${bgColor}; font-family: ${fontFamily};
-  font-size: ${fontSyze}; color: ${fgColor}; height: ${height}; ${getStyle};`">
+  font-size: ${fontSize}; color: ${fgColor}; height: ${height}; ${getStyle};`">
     <h2 class="ph-header-left">
       <div class="ph-main-item" v-on:click="clickBack">
         <icon :name="icon" size="large" :color="fgColor"/>
@@ -39,7 +39,7 @@ export default {
       type: String,
       default: '#cdd1ce'
     },
-    fontSyze: {
+    fontSize: {
       type: String,
       default: '16px'
     },

@@ -1,5 +1,5 @@
 # VueJs Page Header
-This is a component page header for Vue
+This is a component page header for VueJs
 
 ## How import?
 ```
@@ -10,6 +10,7 @@ import PageHeader from "vuejs-page-header"
 ### pagename
 ```
 type: String
+e.g. pagename="The Name"
 ```
 
 ### styles
@@ -21,17 +22,32 @@ e.g.: :styles="{'color': '#f6f6f6'}"
 ### bgColor
 ```
 type: String
-e.g. bgColor="'#cdd1ce'"
+e.g. bgColor="#cdd1ce"
 ```
-
+### fgColor
+```
+type: String
+e.g. fgColor="blue"
+```
+### height
+```
+type: String
+e.g. height="35px"
+```
 ### fontSyze
 ```
 type: String
-e.g. fontSyze="'18px'"
+e.g. fontSyze="18px"
 ```
-
-### fontFamily
+### icon
 ```
 type: String
-e.g. fontFamily="'Tahoma'"
+options: back1, back2
+e.g. icon="back2"
+```
+
+## Event
+### @clickBack
+```
+Called when click on the icon
 ```
