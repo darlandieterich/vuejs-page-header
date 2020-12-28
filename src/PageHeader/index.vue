@@ -3,7 +3,7 @@
   font-size: ${fontSize}; color: ${fgColor}; height: ${height}; ${getStyle};`">
     <h2 class="ph-header-left">
       <div class="ph-main-item" v-on:click="clickBack">
-        <icon :name="icon" size="large" :color="fgColor"/>
+        <icon v-if="icon" :name="icon" size="large" :color="fgColor"/>
       </div>
       <div class="ph-main-item">
         {{pagename}}
@@ -53,7 +53,7 @@ export default {
     },
     icon: {
       type: String,
-      default: 'back1',
+      default: null,
       description: 'Define the icon'
     }
   },

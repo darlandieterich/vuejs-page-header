@@ -49,5 +49,5 @@ e.g. icon="back2"
 ## Event
 ### @clickBack
 ```
-Called when click on the icon
+Called when click on the back button
 ```
