@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <pageheader pagename="Página x" :fontFamily="'Tahoma'" fontSize="28px" @clickBack="test" icon="back1" fgColor="blue">
+    <pageheader pagename="Página x" fontFamily="Tahoma" fontSize="18px" @clickBack="test" icon="back1" fgColor="blue">
       hello
     </pageheader>
   </div>
