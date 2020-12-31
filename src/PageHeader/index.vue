@@ -3,7 +3,7 @@
   font-size: ${fontSize}; color: ${fgColor}; height: ${height}; ${getStyle};`">
     <h2 class="ph-header-left">
       <div class="ph-main-item" v-on:click="clickBack">
-        <icon v-if="icon" :name="icon" size="large" :color="fgColor"/>
+        <icon class="ph-icon-cursor" v-if="icon" :name="icon" size="large" :color="fgColor"/>
       </div>
       <div class="ph-main-item">
         {{pagename}}
@@ -89,6 +89,10 @@ export default {
   font-size: 18px;
   line-height: 1px;
   font-weight: bold;
+}
+
+.ph-icon-cursor{
+  cursor: pointer;
 }
 
 .ph-main-item {
