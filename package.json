@@ -1,7 +1,7 @@
 {
     "name": "vuejs-page-header",
-    "description": "This is a component page header for VueJs",
-    "version": "0.0.1",
+    "description": "This is a simple component page header for VueJs",
+    "version": "0.0.2",
     "author": "Darlan D. <darlandieterich@gmail.com>",
     "license": "MIT",
     "main": "index.js",
@@ -60,5 +60,4 @@
         "*.json",
         "*.js"
     ]
-
 }
