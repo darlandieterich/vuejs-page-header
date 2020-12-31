@@ -1,9 +1,14 @@
 # VueJs Page Header
-This is a component page header for VueJs
+This is a simple component page header for VueJs
 
 ## How import?
 ```
 import PageHeader from "vuejs-page-header"
+```
+
+## How test?
+```
+yarn run serve
 ```
 
 ## Properties
@@ -56,4 +61,6 @@ e.g.: icon="back2"
 ### clickBack
 ```
 Called when click on the back button
+type: Event
+e.g.: clickBack="callTest"
 ```
